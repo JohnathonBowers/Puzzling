@@ -10,5 +10,9 @@ public class TestPuzzle {
         System.out.println("\n----- Ten Rolls Test -----");
             System.out.println(puzzleTest.getTenRolls());
 
+        // Method for returning a random letter
+
+        System.out.println("\n----- Random Letter Test -----");
+            System.out.println(puzzleTest.getRandomLetter());
     }
 }
