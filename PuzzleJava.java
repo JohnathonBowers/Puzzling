@@ -20,10 +20,27 @@ public class PuzzleJava {
         return randomLetter;
     }
 
+    public String generatePassword() {
+        char[] alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+        String password = "";
+        for (int i = 1; i < 9; i++) {
+            int randomIndex = randMachine.nextInt(26) + 0;
+            password += alphabet[randomIndex];
+        }
+        return password;
+    }
+
+    public ArrayList<String> getNewPasswordSet(int arrayLength){
+        char[] alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+        ArrayList<String> passwordArray = new ArrayList<String>();
+        for (int i = 0; i <= arrayLength; i++){
+            String password = "";
+            for (int j = 0; j < 9; j++){
+                int randomIndex = randMachine.nextInt(26) + 0;
+                password += alphabet[randomIndex];
+            }
+            passwordArray.add(password);
+        }
+        return passwordArray;
+    }
 }
-
-// To use methods from the Random library you will need to create an instance of Random
-
-// From there you can use any of the methods listed in the documentation. For example:
- // randMachine.setSeed(35679); <--- you won't need to use this method.
-
